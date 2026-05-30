@@ -193,5 +193,6 @@ async def get_current_staff_route():
                 "permissions": staff.assigned_permissions
             })
     except Exception as e:
+        print("Error in get_current_staff_route:", e)
         traceback.print_exc()
         return await ApiResponse.error(e)
